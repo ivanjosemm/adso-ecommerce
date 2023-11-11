@@ -1,30 +1,26 @@
-import { Box, Divider, Drawer, IconButton, Input, InputAdornment, List, ListItem, ListItemIcon, ListItemButton, ListItemText, ListSubheader } from "@mui/material"
+import { Box, Divider, Drawer, IconButton, Input, InputAdornment, List, ListItem, ListItemButton, ListItemIcon, ListItemText, ListSubheader } from "@mui/material"
 import { AccountCircleOutlined, AdminPanelSettings, CategoryOutlined, ConfirmationNumberOutlined, FemaleOutlined, LoginOutlined, MaleOutlined, SearchOutlined, VpnKeyOutlined, WcOutlined } from "@mui/icons-material"
-
 
 export const SideMenu = () => {
   return (
     <Drawer
       open={true}
-      anchor='right'
-      sx={{ backdropFilter: 'blur(4px)', transition: 'all 0.5s ease-out' }}
+      anchor="right"
+      sx={{ backdropFilter: "blur(4px)", transition: "all 0.5s ease-out" }}
     >
+      
       <Box sx={{ width: 250, paddingTop: 5 }}>
-
         <List>
-
           <ListItem>
             <Input
               type='text'
               placeholder="Buscar..."
               endAdornment={
-                <InputAdornment position="end">
-                  <IconButton
-                    aria-label="toggle password visibility"
-                  >
-                    <SearchOutlined />
-                  </IconButton>
-                </InputAdornment>
+              <InputAdornment position="end">
+                <IconButton aria-label="toggle password visibility">
+                  <SearchOutlined />
+                </IconButton>
+              </InputAdornment>
               }
             />
           </ListItem>
@@ -91,6 +87,7 @@ export const SideMenu = () => {
             </ListItemIcon>
             <ListItemText primary={'Productos'} />
           </ListItemButton>
+
           <ListItemButton>
             <ListItemIcon>
               <ConfirmationNumberOutlined />
@@ -104,8 +101,12 @@ export const SideMenu = () => {
             </ListItemIcon>
             <ListItemText primary={'Usuarios'} />
           </ListItemButton>
+
         </List>
       </Box>
     </Drawer>
   )
 }
+
+
+
