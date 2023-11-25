@@ -3,16 +3,16 @@ interface SeedProduct {
     images: string[];
     inStock: number;
     price: number;
-    sizes: ValidSizes[];
+    sizes: ValidSize[];
     slug: string;
     tags: string[];
     title: string;
-    type: ValidTypes;
+    type: ValidType;
     gender: 'hombre' | 'mujer' | 'unisex';
   }
   
-  type ValidSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | '3XL';
-  type ValidTypes = 'camisetas' | 'buzos' | 'gorras';
+  type ValidSize = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | '3XL';
+  type ValidType = 'camisetas' | 'buzos' | 'gorras';
   
   interface SeedData {
     products: SeedProduct[];
